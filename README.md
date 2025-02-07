@@ -2,8 +2,10 @@
 A simple, quaternion-based quadrotor dynamics model for robotics, control systems, and aerospace applications.
 ## 1. System Definition and State Representation
 ### 1.1. State Vector
-The **state vector**, denoted by xx, encapsulates all the key variables needed to fully describe the rocket's physical state at any given time. These include mass, position, velocity, orientation, and angular velocity:
+The **state vector**, denoted by $x$, encapsulates all the key variables needed to fully describe the rocket's physical state at any given time. These include mass, position, velocity, orientation, and angular velocity:
+
 $$x(t) = \begin{bmatrix} r_{\mathcal{I}}(t)\\v_{\mathcal{I}}(t)\\ q_{\mathcal{B}/\mathcal{I}}(t) \\ \omega_{\mathcal{B}}(t) \end{bmatrix}\in \mathbb{R}^{13}$$
+
 Where:
 - $r_{\mathcal{I}}\in \mathbb{R}^3$: **Position** vector in inertial frame (global reference frame)
 - $v_{\mathcal{I}}\in \mathbb{R}^3$: **Velocity** vector in the inertial frame
