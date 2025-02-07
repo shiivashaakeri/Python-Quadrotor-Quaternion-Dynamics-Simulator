@@ -13,8 +13,30 @@ cd Python-Quadrotor-Quaternion-Dynamics-Simulator
 pip install -r requirements.txt
 ```
 
-
+## Usage
 
 ```py
-g
+import numpy as np
+from rocket_dynamics import RocketDynamics
+
+# Initialize system
+params = {
+    "m": 1.5,
+    "g": np.array([0, 0, -9.81]),
+    "J_b": np.diag([0.03, 0.03, 0.06]),
+    "dt_ss": 0.1
+}
+
+# Create dynamics model
+rocket = RocketDynamics(params)
+
+# Initial state: [position, velocity, quaternion, angular velocity]
+initial_state = np.zeros(13)
+initial_state[6:10] = np.array([1, 0, 0, 0])  # Identity quaternion
+
+# Control inputs: [F_x, F_y, F_z, τ_x, τ_y, τ_z]
+controls = np.array([0, 0, 14.715, 0, 0, 0])  # Hover command
+
+# Simulate for 1 second
+states = rocket.simulate_nonlinear(initial_state, controls, dt=0.1)
 ```
