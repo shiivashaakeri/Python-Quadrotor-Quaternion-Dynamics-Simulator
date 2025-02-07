@@ -13,7 +13,7 @@ cd Python-Quadrotor-Quaternion-Dynamics-Simulator
 pip install -r requirements.txt
 ```
 
-## Usage
+## Basic Usage
 
 ```py
 import numpy as np
@@ -40,3 +40,5 @@ controls = np.array([0, 0, 14.715, 0, 0, 0])  # Hover command
 # Simulate for 1 second
 states = rocket.simulate_nonlinear(initial_state, controls, dt=0.1)
 ```
+
+
