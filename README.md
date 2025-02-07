@@ -11,7 +11,7 @@
 git clone https://github.com/yourusername/Python-Quadrotor-Quaternion-Dynamics-Simulator.git
 pip install -r requirements.txt
 
-```python
+```
 import numpy as np
 from rocket_dynamics import RocketDynamics
 
