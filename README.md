@@ -8,7 +8,7 @@
 
 ## 📥 Installation
 ```bash
-git clone https://github.com/yourusername/Python-Quadrotor-Quaternion-Dynamics-Simulator.git
+git clone https://github.com/shiivashaakeri/Python-Quadrotor-Quaternion-Dynamics-Simulator.git
 cd Python-Quadrotor-Quaternion-Dynamics-Simulator
 pip install -r requirements.txt
 
